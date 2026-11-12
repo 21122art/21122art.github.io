@@ -33,6 +33,18 @@
   .buy{font:inherit;letter-spacing:.15em;text-transform:uppercase;font-size:12px;color:#0a0a0a;background:#e6e6e6;border:0;padding:10px 22px;cursor:pointer}
   .buy[disabled]{background:transparent;color:#6b6b6b;border:1px solid #333;cursor:default}
 
+  .pay{display:flex;gap:28px;align-items:flex-start;margin-top:22px;padding:24px;border:1px solid #1c1c1c}
+  .pay[hidden]{display:none}
+  .qr{flex:0 0 184px;background:#f3f1ec;line-height:0}
+  .qr svg{width:100%;height:auto;display:block}
+  .steps{min-width:0}
+  .steps p{margin:0 0 14px}
+  .addr{font-size:12px;line-height:1.5;word-break:break-all;color:#9a9a9a}
+  .copy{font:inherit;font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:transparent;color:#e6e6e6;border:1px solid #333;padding:3px 10px;margin-left:4px;cursor:pointer;word-break:normal}
+  .pay a{color:#e6e6e6;text-underline-offset:3px}
+  .fine{color:#7d7d7d;font-size:13px;margin-bottom:0!important}
+  @media (max-width:560px){.pay{flex-direction:column;align-items:stretch;padding:20px}.qr{flex:none;width:200px;margin:0 auto 6px}}
+
   footer{border-top:1px solid #1c1c1c;padding:28px 0 56px;color:#6b6b6b;text-align:center;letter-spacing:.06em;font-size:12px}
 </style>
 </head>
@@ -48,10 +60,19 @@
       <img src="001.jpg" width="1600" height="1200" alt="001: two amber streetlamps mirrored through blue haze, glitched">
       <span class="mark l">_/10</span><span class="mark r">21122</span>
     </div>
-    <div class="meta"><h2>001</h2><span class="price">— sats</span></div>
+    <div class="meta"><h2>001</h2><span class="price">74,001 sats</span></div>
     <div class="row">
       <p class="spec">27 × 21 cm giclée · cotton rag · signed &amp; numbered · edition of 10</p>
-      <button class="buy" disabled>soon</button>
+      <button class="buy" aria-expanded="false" aria-controls="pay-001">buy</button>
+    </div>
+    <div class="pay" id="pay-001" hidden>
+      <div class="qr"><svg role="img" aria-label="Bitcoin payment QR code for 001" viewBox="0 0 49 49" class="segno"><path fill="#f3f1ec" d="M0 0h49v49h-49z"/><path class="qrline" stroke="#0a0a0a" d="M4 4.5h7m1 0h1m3 0h1m1 0h1m2 0h1m2 0h3m3 0h1m2 0h1m4 0h7m-41 1h1m5 0h1m1 0h1m1 0h4m2 0h1m1 0h4m3 0h1m2 0h2m1 0h1m2 0h1m5 0h1m-41 1h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h3m2 0h4m1 0h2m2 0h1m1 0h3m1 0h1m1 0h3m1 0h1m-41 1h1m1 0h3m1 0h1m2 0h1m3 0h2m3 0h1m2 0h2m1 0h4m1 0h1m1 0h1m2 0h1m1 0h3m1 0h1m-41 1h1m1 0h3m1 0h1m1 0h1m5 0h2m1 0h4m1 0h1m2 0h1m2 0h5m1 0h1m1 0h3m1 0h1m-41 1h1m5 0h1m4 0h1m1 0h2m1 0h1m1 0h1m2 0h3m2 0h1m3 0h1m1 0h1m1 0h1m5 0h1m-41 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-32 1h1m4 0h1m3 0h1m1 0h1m1 0h7m1 0h1m1 0h1m-33 1h1m2 0h8m1 0h1m1 0h2m1 0h1m2 0h1m3 0h1m1 0h4m1 0h1m1 0h1m2 0h1m1 0h3m-41 1h1m1 0h4m3 0h1m4 0h3m2 0h2m1 0h2m2 0h2m2 0h2m3 0h2m1 0h2m-40 1h3m2 0h2m2 0h2m3 0h1m2 0h1m2 0h2m1 0h3m1 0h1m1 0h1m2 0h1m6 0h1m-40 1h1m1 0h4m2 0h1m2 0h4m1 0h2m2 0h1m2 0h1m4 0h4m2 0h1m1 0h2m2 0h1m-40 1h2m1 0h1m1 0h1m4 0h1m1 0h1m2 0h1m6 0h1m3 0h2m1 0h1m1 0h4m1 0h1m1 0h2m-39 1h1m2 0h1m3 0h1m2 0h2m3 0h1m2 0h2m1 0h2m2 0h2m3 0h5m1 0h3m-38 1h2m1 0h1m3 0h1m1 0h3m1 0h1m2 0h1m1 0h1m3 0h3m2 0h3m5 0h1m1 0h1m-41 1h2m1 0h1m4 0h1m1 0h2m2 0h2m4 0h1m3 0h1m7 0h2m2 0h3m1 0h1m-40 1h1m1 0h2m1 0h2m2 0h1m1 0h4m2 0h1m3 0h4m1 0h1m4 0h1m2 0h1m1 0h1m1 0h1m-40 1h2m2 0h2m1 0h5m2 0h4m1 0h2m1 0h1m2 0h1m1 0h1m3 0h2m3 0h2m1 0h1m-37 1h2m1 0h4m1 0h1m5 0h4m1 0h2m1 0h1m1 0h1m1 0h1m1 0h3m3 0h1m2 0h1m-41 1h1m2 0h3m1 0h8m3 0h1m4 0h1m1 0h1m4 0h1m3 0h1m1 0h1m1 0h2m-40 1h1m2 0h2m1 0h1m1 0h4m2 0h2m2 0h1m3 0h2m4 0h2m2 0h1m1 0h2m1 0h2m1 0h1m-40 1h4m3 0h2m1 0h1m3 0h1m2 0h2m2 0h2m1 0h1m1 0h1m2 0h2m1 0h1m2 0h1m1 0h1m-36 1h5m3 0h1m2 0h3m1 0h1m2 0h4m2 0h2m1 0h1m1 0h2m4 0h1m-39 1h5m4 0h2m1 0h3m1 0h3m5 0h1m2 0h1m1 0h1m3 0h2m1 0h1m3 0h1m-41 1h2m4 0h1m2 0h4m2 0h1m3 0h2m2 0h1m2 0h2m2 0h1m3 0h2m3 0h1m-39 1h5m1 0h1m1 0h1m3 0h4m4 0h4m2 0h1m1 0h1m2 0h1m1 0h4m1 0h2m-40 1h1m1 0h2m1 0h4m3 0h1m1 0h1m3 0h1m5 0h1m1 0h1m2 0h2m1 0h2m1 0h1m2 0h2m-41 1h1m1 0h1m2 0h1m3 0h2m1 0h1m2 0h2m1 0h2m2 0h1m3 0h1m1 0h1m2 0h1m2 0h5m-39 1h1m1 0h1m3 0h5m1 0h2m2 0h1m1 0h1m3 0h2m1 0h1m1 0h1m2 0h2m1 0h1m3 0h1m2 0h1m-41 1h1m3 0h2m1 0h2m1 0h4m3 0h1m1 0h1m1 0h2m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-40 1h2m1 0h2m1 0h1m2 0h3m1 0h1m3 0h4m2 0h1m1 0h1m1 0h7m3 0h1m1 0h2m-41 1h2m2 0h1m6 0h2m2 0h2m1 0h3m1 0h1m1 0h4m3 0h3m4 0h1m-39 1h2m2 0h4m2 0h3m2 0h1m1 0h3m6 0h2m1 0h1m1 0h10m-33 1h5m4 0h3m1 0h1m1 0h2m2 0h1m2 0h1m1 0h1m3 0h1m1 0h2m-40 1h7m1 0h3m2 0h3m5 0h12m1 0h1m1 0h2m1 0h1m-40 1h1m5 0h1m1 0h1m2 0h1m2 0h1m3 0h1m1 0h1m2 0h2m3 0h2m1 0h2m3 0h1m2 0h1m-40 1h1m1 0h3m1 0h1m1 0h1m1 0h2m2 0h2m1 0h1m1 0h2m1 0h1m3 0h2m3 0h6m2 0h2m-41 1h1m1 0h3m1 0h1m1 0h1m3 0h3m1 0h3m3 0h2m1 0h1m1 0h1m2 0h4m3 0h2m1 0h1m-41 1h1m1 0h3m1 0h1m3 0h1m1 0h4m1 0h1m1 0h4m2 0h1m1 0h2m1 0h4m1 0h3m2 0h1m-41 1h1m5 0h1m3 0h4m2 0h1m1 0h3m1 0h2m2 0h3m5 0h1m1 0h1m1 0h1m1 0h1m-41 1h7m1 0h3m3 0h1m2 0h1m1 0h1m3 0h1m1 0h4m2 0h4m1 0h2"/></svg></div>
+      <div class="steps">
+        <p>Send exactly <b>74,001 sats</b> to:</p>
+        <p class="addr">bc1q0ll054kep6l2rs5wvk2jrhs4927gvxgrsankaj5t00vc4gahnmqqaykmdx <button class="copy" data-copy="bc1q0ll054kep6l2rs5wvk2jrhs4927gvxgrsankaj5t00vc4gahnmqqaykmdx">copy</button></p>
+        <p>Then email your postal address to <a href="mailto:glitch21122@icloud.com?subject=001%20%C2%B7%2074%2C001%20sats&amp;body=Print%3A%20001%0AName%3A%0APostal%20address%3A%0A">glitch21122@icloud.com</a></p>
+        <p class="fine">Postage included, anywhere. Any address works. It's used once to post your print, then deleted.</p>
+      </div>
     </div>
   </section>
 
@@ -60,10 +81,19 @@
       <img src="002.jpg" width="1600" height="1200" alt="002: pastel sky broken into pink, green and orange blocks" loading="lazy">
       <span class="mark l">_/10</span><span class="mark r">21122</span>
     </div>
-    <div class="meta"><h2>002</h2><span class="price">— sats</span></div>
+    <div class="meta"><h2>002</h2><span class="price">74,002 sats</span></div>
     <div class="row">
       <p class="spec">27 × 21 cm giclée · cotton rag · signed &amp; numbered · edition of 10</p>
-      <button class="buy" disabled>soon</button>
+      <button class="buy" aria-expanded="false" aria-controls="pay-002">buy</button>
+    </div>
+    <div class="pay" id="pay-002" hidden>
+      <div class="qr"><svg role="img" aria-label="Bitcoin payment QR code for 002" viewBox="0 0 49 49" class="segno"><path fill="#f3f1ec" d="M0 0h49v49h-49z"/><path class="qrline" stroke="#0a0a0a" d="M4 4.5h7m3 0h3m3 0h1m2 0h1m1 0h1m1 0h1m1 0h1m2 0h1m2 0h2m1 0h7m-41 1h1m5 0h1m4 0h2m1 0h5m7 0h4m2 0h1m1 0h1m5 0h1m-41 1h1m1 0h3m1 0h1m1 0h4m2 0h2m2 0h1m1 0h2m2 0h1m5 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-41 1h1m1 0h3m1 0h1m1 0h3m2 0h1m1 0h2m1 0h1m1 0h1m3 0h2m2 0h2m1 0h2m1 0h1m1 0h3m1 0h1m-41 1h1m1 0h3m1 0h1m1 0h1m2 0h1m3 0h1m2 0h2m2 0h2m1 0h2m1 0h1m1 0h2m2 0h1m1 0h3m1 0h1m-41 1h1m5 0h1m1 0h3m2 0h3m1 0h2m7 0h5m1 0h1m1 0h1m5 0h1m-41 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-33 1h1m4 0h1m1 0h1m2 0h2m1 0h4m3 0h1m1 0h2m-32 1h1m1 0h5m2 0h1m2 0h6m1 0h2m1 0h1m1 0h4m1 0h1m4 0h5m-39 1h1m3 0h2m2 0h1m1 0h1m8 0h1m1 0h1m1 0h1m4 0h1m1 0h7m3 0h1m-36 1h2m1 0h4m9 0h1m2 0h4m7 0h1m2 0h2m-40 1h1m1 0h1m1 0h1m3 0h3m1 0h4m4 0h3m4 0h1m2 0h2m1 0h1m1 0h3m1 0h1m-40 1h2m2 0h5m1 0h1m3 0h1m1 0h2m1 0h2m1 0h1m2 0h3m1 0h3m1 0h1m4 0h2m-37 1h1m1 0h1m1 0h2m2 0h2m1 0h4m1 0h1m3 0h4m1 0h1m2 0h1m2 0h4m2 0h1m-40 1h1m1 0h1m2 0h2m3 0h2m1 0h1m1 0h1m4 0h2m3 0h3m1 0h1m3 0h1m2 0h2m-39 1h3m1 0h1m4 0h1m1 0h2m2 0h1m5 0h2m1 0h1m1 0h3m2 0h1m2 0h1m1 0h2m1 0h1m-39 1h8m1 0h4m3 0h2m1 0h1m1 0h1m1 0h4m1 0h1m7 0h3m-40 1h2m1 0h1m3 0h2m5 0h1m4 0h3m1 0h1m1 0h1m2 0h2m1 0h7m2 0h1m-40 1h3m1 0h2m3 0h1m2 0h2m1 0h1m1 0h1m7 0h3m4 0h3m2 0h1m-39 1h3m1 0h2m3 0h7m2 0h4m1 0h1m2 0h2m2 0h5m1 0h2m-38 1h2m1 0h1m2 0h4m1 0h1m3 0h2m1 0h2m3 0h1m1 0h1m3 0h1m1 0h2m2 0h1m2 0h1m-38 1h1m1 0h1m6 0h2m2 0h1m1 0h1m1 0h4m1 0h1m1 0h2m1 0h1m1 0h3m1 0h1m1 0h1m2 0h2m-37 1h1m1 0h1m1 0h1m6 0h4m1 0h3m1 0h1m1 0h5m2 0h1m1 0h1m-36 1h2m3 0h1m1 0h1m3 0h5m2 0h1m2 0h4m3 0h1m6 0h2m2 0h1m-40 1h1m3 0h6m2 0h6m4 0h1m2 0h1m1 0h6m4 0h4m-41 1h1m3 0h2m2 0h1m7 0h1m2 0h2m1 0h5m2 0h1m1 0h1m1 0h4m1 0h1m1 0h1m-41 1h2m1 0h2m1 0h1m1 0h3m4 0h2m5 0h1m4 0h2m1 0h1m2 0h1m2 0h2m1 0h1m-39 1h1m1 0h3m2 0h1m3 0h1m1 0h1m3 0h4m5 0h1m3 0h3m1 0h3m1 0h2m-40 1h1m2 0h1m1 0h2m1 0h3m1 0h2m1 0h3m1 0h1m1 0h1m2 0h3m1 0h5m1 0h1m1 0h2m1 0h1m-41 1h1m2 0h1m1 0h1m1 0h3m1 0h3m2 0h1m2 0h1m3 0h2m3 0h1m2 0h1m2 0h1m1 0h2m2 0h1m-41 1h1m1 0h2m1 0h5m1 0h1m2 0h3m1 0h1m3 0h1m3 0h2m2 0h1m2 0h3m2 0h2m-40 1h1m1 0h3m2 0h3m1 0h1m1 0h3m2 0h1m2 0h2m1 0h1m12 0h1m1 0h1m-40 1h1m4 0h2m5 0h2m2 0h3m3 0h1m2 0h5m2 0h5m1 0h2m-32 1h1m2 0h10m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m3 0h1m3 0h1m-41 1h7m4 0h1m1 0h3m1 0h1m2 0h3m1 0h2m1 0h2m1 0h3m1 0h1m1 0h4m-40 1h1m5 0h1m1 0h2m5 0h4m1 0h3m1 0h1m2 0h1m3 0h2m3 0h1m3 0h1m-41 1h1m1 0h3m1 0h1m1 0h2m3 0h1m1 0h2m6 0h1m1 0h1m1 0h3m2 0h8m-40 1h1m1 0h3m1 0h1m1 0h3m1 0h1m1 0h10m2 0h1m3 0h1m8 0h2m-41 1h1m1 0h3m1 0h1m1 0h1m3 0h1m1 0h4m2 0h2m5 0h1m2 0h1m1 0h5m-37 1h1m5 0h1m2 0h1m1 0h5m2 0h2m1 0h1m1 0h1m8 0h2m2 0h1m2 0h1m-40 1h7m1 0h4m7 0h2m4 0h1m1 0h3m1 0h1m1 0h6"/></svg></div>
+      <div class="steps">
+        <p>Send exactly <b>74,002 sats</b> to:</p>
+        <p class="addr">bc1q0ll054kep6l2rs5wvk2jrhs4927gvxgrsankaj5t00vc4gahnmqqaykmdx <button class="copy" data-copy="bc1q0ll054kep6l2rs5wvk2jrhs4927gvxgrsankaj5t00vc4gahnmqqaykmdx">copy</button></p>
+        <p>Then email your postal address to <a href="mailto:glitch21122@icloud.com?subject=002%20%C2%B7%2074%2C002%20sats&amp;body=Print%3A%20002%0AName%3A%0APostal%20address%3A%0A">glitch21122@icloud.com</a></p>
+        <p class="fine">Postage included, anywhere. Any address works. It's used once to post your print, then deleted.</p>
+      </div>
     </div>
   </section>
 
@@ -72,10 +102,19 @@
       <img src="003.jpg" width="1600" height="1200" alt="003: coastal signpost split into layers of magenta, cyan and yellow" loading="lazy">
       <span class="mark l">_/10</span><span class="mark r">21122</span>
     </div>
-    <div class="meta"><h2>003</h2><span class="price">— sats</span></div>
+    <div class="meta"><h2>003</h2><span class="price">74,003 sats</span></div>
     <div class="row">
       <p class="spec">27 × 21 cm giclée · cotton rag · signed &amp; numbered · edition of 10</p>
-      <button class="buy" disabled>soon</button>
+      <button class="buy" aria-expanded="false" aria-controls="pay-003">buy</button>
+    </div>
+    <div class="pay" id="pay-003" hidden>
+      <div class="qr"><svg role="img" aria-label="Bitcoin payment QR code for 003" viewBox="0 0 49 49" class="segno"><path fill="#f3f1ec" d="M0 0h49v49h-49z"/><path class="qrline" stroke="#0a0a0a" d="M4 4.5h7m1 0h2m2 0h3m2 0h1m2 0h3m3 0h1m2 0h1m4 0h7m-41 1h1m5 0h1m1 0h5m1 0h1m1 0h6m3 0h1m2 0h2m1 0h1m2 0h1m5 0h1m-41 1h1m1 0h3m1 0h1m1 0h4m3 0h2m2 0h4m1 0h2m2 0h1m1 0h3m1 0h1m1 0h3m1 0h1m-41 1h1m1 0h3m1 0h1m3 0h1m2 0h2m3 0h1m2 0h2m1 0h4m1 0h1m1 0h1m2 0h1m1 0h3m1 0h1m-41 1h1m1 0h3m1 0h1m1 0h1m1 0h1m3 0h2m1 0h4m1 0h1m2 0h1m2 0h5m1 0h1m1 0h3m1 0h1m-41 1h1m5 0h1m4 0h1m1 0h2m1 0h1m1 0h1m2 0h3m2 0h1m3 0h1m1 0h1m1 0h1m5 0h1m-41 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-32 1h1m4 0h1m3 0h1m1 0h1m1 0h7m1 0h1m1 0h1m-33 1h1m2 0h8m1 0h1m1 0h2m1 0h1m2 0h1m3 0h1m1 0h4m1 0h1m1 0h1m2 0h1m1 0h3m-39 1h2m1 0h1m3 0h1m4 0h3m2 0h2m1 0h2m2 0h2m2 0h2m3 0h2m1 0h2m-39 1h2m2 0h2m2 0h2m3 0h1m2 0h1m2 0h2m1 0h3m1 0h1m1 0h1m2 0h1m6 0h1m-40 1h4m1 0h1m2 0h1m2 0h4m1 0h2m2 0h1m2 0h1m4 0h4m2 0h1m1 0h2m2 0h1m-40 1h2m1 0h3m4 0h3m2 0h1m6 0h1m3 0h2m1 0h1m1 0h4m1 0h1m1 0h2m-40 1h2m2 0h1m3 0h1m1 0h1m1 0h1m1 0h3m2 0h2m1 0h2m2 0h2m3 0h5m1 0h3m-38 1h2m1 0h1m3 0h1m1 0h3m1 0h1m2 0h1m1 0h1m3 0h3m2 0h3m5 0h1m1 0h1m-41 1h2m1 0h1m4 0h1m1 0h2m2 0h1m5 0h1m3 0h1m6 0h3m2 0h3m1 0h1m-40 1h1m1 0h2m1 0h2m2 0h5m3 0h1m3 0h4m1 0h1m4 0h1m2 0h1m1 0h1m1 0h1m-40 1h2m2 0h2m1 0h5m2 0h4m1 0h2m1 0h1m2 0h1m1 0h1m3 0h2m3 0h2m1 0h1m-37 1h2m1 0h3m2 0h1m5 0h4m1 0h2m1 0h1m1 0h1m1 0h1m1 0h3m3 0h1m2 0h1m-41 1h1m2 0h3m1 0h3m1 0h3m4 0h1m4 0h1m1 0h1m4 0h1m3 0h1m1 0h1m1 0h2m-40 1h1m3 0h1m1 0h1m1 0h4m3 0h1m2 0h1m3 0h2m4 0h2m2 0h1m1 0h2m1 0h2m1 0h1m-40 1h1m1 0h2m3 0h2m1 0h1m3 0h1m2 0h2m2 0h2m1 0h1m1 0h1m2 0h2m1 0h1m2 0h1m1 0h1m-36 1h6m2 0h1m2 0h3m1 0h1m2 0h4m2 0h2m1 0h1m1 0h2m4 0h1m-39 1h2m1 0h2m2 0h1m1 0h2m1 0h3m1 0h3m5 0h1m2 0h1m1 0h1m3 0h2m1 0h1m3 0h1m-41 1h2m4 0h1m2 0h4m2 0h1m3 0h2m2 0h1m2 0h2m2 0h1m3 0h2m3 0h1m-39 1h5m1 0h1m1 0h1m3 0h4m4 0h4m2 0h1m1 0h1m2 0h1m1 0h4m1 0h2m-38 1h1m2 0h4m3 0h1m1 0h1m3 0h1m5 0h1m1 0h1m2 0h2m1 0h2m1 0h1m2 0h2m-40 1h2m1 0h1m4 0h2m1 0h1m2 0h2m1 0h2m2 0h1m3 0h1m1 0h1m2 0h1m2 0h5m-38 1h2m1 0h1m1 0h5m2 0h1m4 0h1m3 0h2m1 0h1m1 0h1m2 0h2m1 0h1m3 0h1m2 0h1m-41 1h2m2 0h2m1 0h2m1 0h4m1 0h3m1 0h1m1 0h2m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-40 1h2m1 0h2m1 0h1m2 0h2m1 0h2m3 0h4m2 0h1m1 0h1m1 0h7m3 0h1m1 0h2m-41 1h2m2 0h1m10 0h1m2 0h3m1 0h1m1 0h4m3 0h3m4 0h1m-39 1h2m2 0h4m2 0h3m2 0h1m1 0h3m6 0h2m1 0h1m1 0h10m-33 1h1m1 0h4m3 0h3m1 0h1m1 0h2m2 0h1m2 0h1m1 0h1m3 0h1m1 0h2m-40 1h7m1 0h1m1 0h1m2 0h3m5 0h12m1 0h1m1 0h2m1 0h1m-40 1h1m5 0h1m1 0h2m1 0h1m1 0h1m4 0h1m1 0h1m2 0h2m3 0h2m1 0h2m3 0h1m2 0h1m-40 1h1m1 0h3m1 0h1m1 0h1m1 0h2m1 0h1m1 0h1m1 0h1m1 0h2m1 0h1m3 0h2m3 0h6m2 0h2m-41 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h3m1 0h3m3 0h2m1 0h1m1 0h1m2 0h4m3 0h2m1 0h1m-41 1h1m1 0h3m1 0h1m3 0h1m1 0h4m1 0h1m1 0h4m2 0h1m1 0h2m1 0h4m1 0h3m2 0h1m-41 1h1m5 0h1m3 0h4m2 0h1m1 0h3m1 0h2m2 0h3m5 0h1m1 0h1m1 0h1m1 0h1m-41 1h7m1 0h3m3 0h1m2 0h1m1 0h1m3 0h1m1 0h4m2 0h4m1 0h2"/></svg></div>
+      <div class="steps">
+        <p>Send exactly <b>74,003 sats</b> to:</p>
+        <p class="addr">bc1q0ll054kep6l2rs5wvk2jrhs4927gvxgrsankaj5t00vc4gahnmqqaykmdx <button class="copy" data-copy="bc1q0ll054kep6l2rs5wvk2jrhs4927gvxgrsankaj5t00vc4gahnmqqaykmdx">copy</button></p>
+        <p>Then email your postal address to <a href="mailto:glitch21122@icloud.com?subject=003%20%C2%B7%2074%2C003%20sats&amp;body=Print%3A%20003%0AName%3A%0APostal%20address%3A%0A">glitch21122@icloud.com</a></p>
+        <p class="fine">Postage included, anywhere. Any address works. It's used once to post your print, then deleted.</p>
+      </div>
     </div>
   </section>
 
@@ -84,10 +123,19 @@
       <img src="004.jpg" width="1600" height="1200" alt="004: night coastline with red streaks of light along the horizon" loading="lazy">
       <span class="mark l">_/10</span><span class="mark r">21122</span>
     </div>
-    <div class="meta"><h2>004</h2><span class="price">— sats</span></div>
+    <div class="meta"><h2>004</h2><span class="price">74,004 sats</span></div>
     <div class="row">
       <p class="spec">27 × 21 cm giclée · cotton rag · signed &amp; numbered · edition of 10</p>
-      <button class="buy" disabled>soon</button>
+      <button class="buy" aria-expanded="false" aria-controls="pay-004">buy</button>
+    </div>
+    <div class="pay" id="pay-004" hidden>
+      <div class="qr"><svg role="img" aria-label="Bitcoin payment QR code for 004" viewBox="0 0 49 49" class="segno"><path fill="#f3f1ec" d="M0 0h49v49h-49z"/><path class="qrline" stroke="#0a0a0a" d="M4 4.5h7m4 0h2m1 0h2m3 0h2m1 0h2m1 0h3m3 0h1m2 0h7m-41 1h1m5 0h1m7 0h2m1 0h2m3 0h3m1 0h2m2 0h1m1 0h1m1 0h1m5 0h1m-41 1h1m1 0h3m1 0h1m6 0h2m1 0h3m1 0h1m1 0h3m2 0h4m1 0h1m1 0h1m1 0h3m1 0h1m-41 1h1m1 0h3m1 0h1m2 0h1m1 0h2m1 0h4m1 0h2m2 0h1m4 0h1m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-41 1h1m1 0h3m1 0h1m2 0h1m1 0h1m1 0h1m4 0h1m1 0h4m3 0h2m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-41 1h1m5 0h1m1 0h3m1 0h1m2 0h1m1 0h1m1 0h2m3 0h2m1 0h3m1 0h1m2 0h1m5 0h1m-41 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-31 1h4m1 0h3m1 0h1m1 0h1m7 0h1m1 0h1m-32 1h1m2 0h1m1 0h2m1 0h1m1 0h5m4 0h3m1 0h4m1 0h1m4 0h1m1 0h1m-36 1h2m5 0h2m1 0h4m3 0h2m2 0h1m2 0h2m2 0h2m2 0h3m2 0h1m2 0h1m-39 1h2m1 0h3m2 0h2m1 0h3m3 0h2m3 0h1m6 0h3m1 0h1m1 0h1m-38 1h2m5 0h1m1 0h2m4 0h1m2 0h2m1 0h2m1 0h4m4 0h2m1 0h1m2 0h2m-38 1h2m1 0h3m1 0h1m5 0h3m1 0h1m1 0h1m3 0h1m2 0h5m1 0h1m5 0h1m-41 1h1m2 0h3m1 0h2m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m2 0h1m2 0h2m2 0h3m5 0h1m-37 1h1m2 0h4m1 0h2m3 0h4m5 0h1m2 0h1m2 0h2m2 0h1m1 0h1m1 0h4m-39 1h1m1 0h2m1 0h1m1 0h1m3 0h1m2 0h4m1 0h3m1 0h8m1 0h2m3 0h1m-36 1h3m2 0h2m1 0h1m1 0h1m2 0h3m1 0h2m1 0h1m4 0h1m1 0h3m-32 1h2m8 0h2m4 0h1m2 0h1m1 0h2m1 0h1m1 0h3m2 0h3m2 0h1m1 0h1m-40 1h1m2 0h3m1 0h3m4 0h1m2 0h1m1 0h3m9 0h1m2 0h1m3 0h2m-40 1h2m6 0h2m4 0h3m1 0h4m1 0h1m1 0h4m1 0h3m1 0h1m1 0h1m2 0h1m-41 1h2m1 0h6m1 0h1m3 0h1m2 0h3m1 0h2m2 0h1m1 0h2m2 0h4m3 0h3m-41 1h1m4 0h1m1 0h1m2 0h1m1 0h3m1 0h2m2 0h2m2 0h1m1 0h1m1 0h2m2 0h1m1 0h2m1 0h1m1 0h2m-40 1h4m1 0h4m3 0h2m1 0h4m2 0h1m1 0h2m2 0h5m2 0h1m1 0h3m-37 1h1m1 0h1m5 0h1m3 0h1m3 0h5m1 0h2m1 0h1m1 0h3m2 0h1m1 0h3m-40 1h1m1 0h2m1 0h3m2 0h1m1 0h2m3 0h1m2 0h2m3 0h2m2 0h3m1 0h2m2 0h1m-38 1h1m7 0h1m1 0h3m4 0h4m4 0h2m1 0h1m1 0h2m1 0h1m4 0h1m-33 1h1m1 0h1m2 0h1m5 0h1m3 0h1m1 0h1m5 0h2m3 0h4m2 0h1m-41 1h1m2 0h1m3 0h2m2 0h1m1 0h2m2 0h1m2 0h2m1 0h3m1 0h1m1 0h2m1 0h2m5 0h2m-39 1h2m1 0h2m1 0h1m1 0h3m2 0h1m1 0h3m1 0h2m6 0h2m4 0h1m3 0h2m-39 1h2m1 0h1m3 0h1m4 0h1m1 0h1m1 0h1m1 0h1m2 0h1m1 0h2m1 0h1m1 0h1m1 0h1m1 0h1m3 0h1m1 0h1m-41 1h1m3 0h4m2 0h1m4 0h1m2 0h1m1 0h2m6 0h1m1 0h1m1 0h1m2 0h1m4 0h1m-39 1h2m1 0h1m1 0h4m1 0h4m1 0h1m3 0h1m1 0h1m4 0h3m3 0h4m1 0h2m-41 1h1m2 0h2m1 0h1m2 0h2m1 0h2m4 0h1m2 0h1m1 0h1m1 0h2m5 0h5m1 0h1m1 0h1m-33 1h2m3 0h4m3 0h1m1 0h1m2 0h2m1 0h2m1 0h2m3 0h2m2 0h1m-41 1h7m3 0h2m1 0h1m3 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m-37 1h1m5 0h1m1 0h2m2 0h1m2 0h3m1 0h1m1 0h2m2 0h3m2 0h1m1 0h1m3 0h3m1 0h1m-41 1h1m1 0h3m1 0h1m2 0h1m10 0h4m1 0h2m2 0h1m2 0h6m2 0h1m-41 1h1m1 0h3m1 0h1m1 0h2m1 0h1m3 0h1m3 0h3m2 0h1m1 0h1m1 0h2m4 0h3m2 0h1m-40 1h1m1 0h3m1 0h1m2 0h4m1 0h1m5 0h1m1 0h2m4 0h3m1 0h1m3 0h1m2 0h2m-41 1h1m5 0h1m2 0h1m4 0h2m1 0h1m3 0h1m2 0h2m3 0h5m1 0h1m1 0h1m1 0h1m-40 1h7m1 0h1m1 0h2m1 0h3m5 0h1m4 0h1m1 0h2m2 0h1m1 0h3m2 0h1"/></svg></div>
+      <div class="steps">
+        <p>Send exactly <b>74,004 sats</b> to:</p>
+        <p class="addr">bc1q0ll054kep6l2rs5wvk2jrhs4927gvxgrsankaj5t00vc4gahnmqqaykmdx <button class="copy" data-copy="bc1q0ll054kep6l2rs5wvk2jrhs4927gvxgrsankaj5t00vc4gahnmqqaykmdx">copy</button></p>
+        <p>Then email your postal address to <a href="mailto:glitch21122@icloud.com?subject=004%20%C2%B7%2074%2C004%20sats&amp;body=Print%3A%20004%0AName%3A%0APostal%20address%3A%0A">glitch21122@icloud.com</a></p>
+        <p class="fine">Postage included, anywhere. Any address works. It's used once to post your print, then deleted.</p>
+      </div>
     </div>
   </section>
 
@@ -96,14 +144,27 @@
       <img src="005.jpg" width="1600" height="1200" alt="005: two hooded figures with flags on a rooftop, doubled in cyan" loading="lazy">
       <span class="mark l">_/10</span><span class="mark r">21122</span>
     </div>
-    <div class="meta"><h2>005</h2><span class="price">— sats</span></div>
+    <div class="meta"><h2>005</h2><span class="price">74,005 sats</span></div>
     <div class="row">
       <p class="spec">27 × 21 cm giclée · cotton rag · signed &amp; numbered · edition of 10</p>
-      <button class="buy" disabled>soon</button>
+      <button class="buy" aria-expanded="false" aria-controls="pay-005">buy</button>
+    </div>
+    <div class="pay" id="pay-005" hidden>
+      <div class="qr"><svg role="img" aria-label="Bitcoin payment QR code for 005" viewBox="0 0 49 49" class="segno"><path fill="#f3f1ec" d="M0 0h49v49h-49z"/><path class="qrline" stroke="#0a0a0a" d="M4 4.5h7m1 0h1m3 0h3m2 0h1m2 0h3m3 0h1m2 0h1m4 0h7m-41 1h1m5 0h1m1 0h2m1 0h2m1 0h1m1 0h1m2 0h3m3 0h1m2 0h2m1 0h1m2 0h1m5 0h1m-41 1h1m1 0h3m1 0h1m1 0h4m1 0h1m1 0h2m2 0h4m1 0h2m2 0h1m1 0h3m1 0h1m1 0h3m1 0h1m-41 1h1m1 0h3m1 0h1m6 0h1m4 0h1m2 0h2m1 0h4m1 0h1m1 0h1m2 0h1m1 0h3m1 0h1m-41 1h1m1 0h3m1 0h1m1 0h1m1 0h1m4 0h1m1 0h4m1 0h1m2 0h1m2 0h5m1 0h1m1 0h3m1 0h1m-41 1h1m5 0h1m4 0h1m1 0h2m1 0h1m1 0h1m2 0h3m2 0h1m3 0h1m1 0h1m1 0h1m5 0h1m-41 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-32 1h1m4 0h1m3 0h1m1 0h1m1 0h7m1 0h1m1 0h1m-33 1h1m2 0h8m1 0h1m1 0h2m1 0h1m2 0h1m3 0h1m1 0h4m1 0h1m1 0h1m2 0h1m1 0h3m-41 1h1m1 0h4m3 0h1m4 0h3m2 0h2m1 0h2m2 0h2m2 0h2m3 0h2m1 0h2m-38 1h1m2 0h2m2 0h2m3 0h1m2 0h1m2 0h2m1 0h3m1 0h1m1 0h1m2 0h1m6 0h1m-39 1h5m2 0h1m2 0h4m1 0h2m2 0h1m2 0h1m4 0h4m2 0h1m1 0h2m2 0h1m-41 1h1m1 0h1m1 0h3m4 0h3m9 0h1m3 0h2m1 0h1m1 0h4m1 0h1m1 0h2m-40 1h2m6 0h1m1 0h3m3 0h1m2 0h2m1 0h2m2 0h2m3 0h5m1 0h3m-38 1h2m1 0h1m3 0h1m2 0h2m4 0h1m1 0h1m3 0h3m2 0h3m5 0h1m1 0h1m-41 1h2m1 0h1m4 0h1m1 0h2m2 0h3m3 0h1m3 0h1m8 0h1m2 0h3m1 0h1m-40 1h1m1 0h2m1 0h2m2 0h1m1 0h4m2 0h1m3 0h4m1 0h1m4 0h1m2 0h1m1 0h1m1 0h1m-40 1h2m2 0h2m1 0h5m2 0h4m1 0h2m1 0h1m2 0h1m1 0h1m3 0h2m3 0h2m1 0h1m-37 1h2m1 0h3m1 0h2m1 0h1m3 0h4m1 0h2m1 0h1m1 0h1m1 0h1m1 0h3m3 0h1m2 0h1m-41 1h1m2 0h3m1 0h6m1 0h1m3 0h1m4 0h1m1 0h1m4 0h1m3 0h1m1 0h1m1 0h2m-40 1h1m2 0h2m1 0h1m1 0h4m2 0h2m2 0h1m3 0h2m4 0h2m2 0h1m1 0h2m1 0h2m1 0h1m-40 1h1m2 0h1m3 0h2m1 0h1m3 0h1m2 0h2m2 0h2m1 0h1m1 0h1m2 0h2m1 0h1m2 0h1m1 0h1m-36 1h5m3 0h1m2 0h3m1 0h1m2 0h4m2 0h2m1 0h1m1 0h2m4 0h1m-39 1h3m1 0h1m2 0h4m1 0h3m1 0h3m5 0h1m2 0h1m1 0h1m3 0h2m1 0h1m3 0h1m-41 1h2m4 0h1m2 0h4m2 0h1m3 0h2m2 0h1m2 0h2m2 0h1m3 0h2m3 0h1m-40 1h6m1 0h1m1 0h1m3 0h4m4 0h4m2 0h1m1 0h1m2 0h1m1 0h4m1 0h2m-41 1h2m1 0h1m1 0h5m3 0h1m1 0h1m3 0h1m5 0h1m1 0h1m2 0h2m1 0h2m1 0h1m2 0h2m-40 1h2m6 0h2m1 0h1m2 0h2m1 0h2m2 0h1m3 0h1m1 0h1m2 0h1m2 0h5m-38 1h2m2 0h6m1 0h2m2 0h1m1 0h1m3 0h2m1 0h1m1 0h1m2 0h2m1 0h1m3 0h1m2 0h1m-41 1h1m3 0h2m1 0h2m1 0h1m1 0h2m1 0h3m1 0h1m1 0h2m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-40 1h2m1 0h2m1 0h1m2 0h5m1 0h1m1 0h4m2 0h1m1 0h1m1 0h7m3 0h1m1 0h2m-41 1h2m2 0h1m10 0h2m1 0h3m1 0h1m1 0h4m3 0h3m4 0h1m-39 1h2m2 0h4m2 0h1m1 0h1m4 0h3m6 0h2m1 0h1m1 0h10m-33 1h5m4 0h3m1 0h1m1 0h2m2 0h1m2 0h1m1 0h1m3 0h1m1 0h2m-40 1h7m1 0h2m4 0h2m5 0h12m1 0h1m1 0h2m1 0h1m-40 1h1m5 0h1m1 0h2m1 0h1m2 0h1m3 0h1m1 0h1m2 0h2m3 0h2m1 0h2m3 0h1m2 0h1m-40 1h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h2m1 0h1m1 0h2m1 0h1m3 0h2m3 0h6m2 0h2m-41 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h2m2 0h3m3 0h2m1 0h1m1 0h1m2 0h4m3 0h2m1 0h1m-41 1h1m1 0h3m1 0h1m3 0h1m1 0h4m1 0h1m1 0h4m2 0h1m1 0h2m1 0h4m1 0h3m2 0h1m-41 1h1m5 0h1m3 0h4m2 0h1m1 0h3m1 0h2m2 0h3m5 0h1m1 0h1m1 0h1m1 0h1m-41 1h7m1 0h3m3 0h1m2 0h1m1 0h1m3 0h1m1 0h4m2 0h4m1 0h2"/></svg></div>
+      <div class="steps">
+        <p>Send exactly <b>74,005 sats</b> to:</p>
+        <p class="addr">bc1q0ll054kep6l2rs5wvk2jrhs4927gvxgrsankaj5t00vc4gahnmqqaykmdx <button class="copy" data-copy="bc1q0ll054kep6l2rs5wvk2jrhs4927gvxgrsankaj5t00vc4gahnmqqaykmdx">copy</button></p>
+        <p>Then email your postal address to <a href="mailto:glitch21122@icloud.com?subject=005%20%C2%B7%2074%2C005%20sats&amp;body=Print%3A%20005%0AName%3A%0APostal%20address%3A%0A">glitch21122@icloud.com</a></p>
+        <p class="fine">Postage included, anywhere. Any address works. It's used once to post your print, then deleted.</p>
+      </div>
     </div>
   </section>
 
   <footer>21122 · 2026</footer>
 </main>
+<script>
+document.querySelectorAll('.buy[aria-controls]').forEach(function(b){b.addEventListener('click',function(){var p=document.getElementById(b.getAttribute('aria-controls'));var open=p.hidden;p.hidden=!open;b.setAttribute('aria-expanded',open);b.textContent=open?'close':'buy';});});
+document.querySelectorAll('.copy').forEach(function(c){c.addEventListener('click',function(){if(!navigator.clipboard)return;navigator.clipboard.writeText(c.dataset.copy).then(function(){c.textContent='copied';setTimeout(function(){c.textContent='copy'},1500);});});});
+</script>
 </body>
 </html>
