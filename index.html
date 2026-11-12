@@ -4,15 +4,104 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>21122</title>
+<meta name="description" content="Signed limited-edition prints. Bitcoin only.">
 <style>
-html,body{height:100%;margin:0;background:#000;color:#fff;font-family:ui-monospace,Menlo,monospace}
-body{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem}
-h1{font-weight:400;font-size:3rem;letter-spacing:.3em;padding-left:.3em;margin:0}
-p{opacity:.5;margin:0}
+  *{box-sizing:border-box}
+  html{background:#0a0a0a}
+  body{margin:0;color:#e6e6e6;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  main{max-width:920px;margin:0 auto;padding:0 20px}
+
+  header{padding:96px 0 72px;text-align:center}
+  header h1{font-weight:400;font-size:clamp(2.2rem,6vw,3.4rem);letter-spacing:.35em;padding-left:.35em;margin:0}
+  header p{margin:.75rem 0 0;color:#8a8a8a;letter-spacing:.08em}
+
+  .work{margin:0 0 120px}
+  /* print: 270x210mm sheet, 240x180mm image, even 15mm border */
+  .sheet{position:relative;aspect-ratio:270/210;background:#f3f1ec;box-shadow:0 24px 60px rgba(0,0,0,.65)}
+  .sheet img{position:absolute;left:5.556%;top:7.143%;width:88.889%;height:85.714%;object-fit:cover;display:block}
+  .mark{position:absolute;bottom:2.1%;font-size:clamp(6px,1.05vw,10px);color:#9b968c;letter-spacing:.06em}
+  .mark.l{left:5.556%}
+  .mark.r{right:5.556%}
+
+  .meta{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-top:22px}
+  .meta h2{font-weight:400;font-size:1.1rem;letter-spacing:.2em;margin:0}
+  .price{color:#bdbdbd}
+  .row{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:6px;flex-wrap:wrap}
+  .spec{color:#7d7d7d;margin:0}
+  .buy{font:inherit;letter-spacing:.15em;text-transform:uppercase;font-size:12px;color:#0a0a0a;background:#e6e6e6;border:0;padding:10px 22px;cursor:pointer}
+  .buy[disabled]{background:transparent;color:#6b6b6b;border:1px solid #333;cursor:default}
+
+  footer{border-top:1px solid #1c1c1c;padding:28px 0 56px;color:#6b6b6b;text-align:center;letter-spacing:.06em;font-size:12px}
 </style>
 </head>
 <body>
-<h1>21122</h1>
-<p>soon</p>
+<main>
+  <header>
+    <h1>21122</h1>
+    <p>signed prints · bitcoin only</p>
+  </header>
+
+  <section class="work" id="001">
+    <div class="sheet">
+      <img src="001.jpg" width="1600" height="1200" alt="001: two amber streetlamps mirrored through blue haze, glitched">
+      <span class="mark l">_/10</span><span class="mark r">21122</span>
+    </div>
+    <div class="meta"><h2>001</h2><span class="price">— sats</span></div>
+    <div class="row">
+      <p class="spec">27 × 21 cm giclée · cotton rag · signed &amp; numbered · edition of 10</p>
+      <button class="buy" disabled>soon</button>
+    </div>
+  </section>
+
+  <section class="work" id="002">
+    <div class="sheet">
+      <img src="002.jpg" width="1600" height="1200" alt="002: pastel sky broken into pink, green and orange blocks" loading="lazy">
+      <span class="mark l">_/10</span><span class="mark r">21122</span>
+    </div>
+    <div class="meta"><h2>002</h2><span class="price">— sats</span></div>
+    <div class="row">
+      <p class="spec">27 × 21 cm giclée · cotton rag · signed &amp; numbered · edition of 10</p>
+      <button class="buy" disabled>soon</button>
+    </div>
+  </section>
+
+  <section class="work" id="003">
+    <div class="sheet">
+      <img src="003.jpg" width="1600" height="1200" alt="003: coastal signpost split into layers of magenta, cyan and yellow" loading="lazy">
+      <span class="mark l">_/10</span><span class="mark r">21122</span>
+    </div>
+    <div class="meta"><h2>003</h2><span class="price">— sats</span></div>
+    <div class="row">
+      <p class="spec">27 × 21 cm giclée · cotton rag · signed &amp; numbered · edition of 10</p>
+      <button class="buy" disabled>soon</button>
+    </div>
+  </section>
+
+  <section class="work" id="004">
+    <div class="sheet">
+      <img src="004.jpg" width="1600" height="1200" alt="004: night coastline with red streaks of light along the horizon" loading="lazy">
+      <span class="mark l">_/10</span><span class="mark r">21122</span>
+    </div>
+    <div class="meta"><h2>004</h2><span class="price">— sats</span></div>
+    <div class="row">
+      <p class="spec">27 × 21 cm giclée · cotton rag · signed &amp; numbered · edition of 10</p>
+      <button class="buy" disabled>soon</button>
+    </div>
+  </section>
+
+  <section class="work" id="005">
+    <div class="sheet">
+      <img src="005.jpg" width="1600" height="1200" alt="005: two hooded figures with flags on a rooftop, doubled in cyan" loading="lazy">
+      <span class="mark l">_/10</span><span class="mark r">21122</span>
+    </div>
+    <div class="meta"><h2>005</h2><span class="price">— sats</span></div>
+    <div class="row">
+      <p class="spec">27 × 21 cm giclée · cotton rag · signed &amp; numbered · edition of 10</p>
+      <button class="buy" disabled>soon</button>
+    </div>
+  </section>
+
+  <footer>bitcoin only · signed by hand · posted tracked from the uk</footer>
+</main>
 </body>
 </html>
