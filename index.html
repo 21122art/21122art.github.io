@@ -183,5 +183,6 @@
 document.querySelectorAll('.buy[aria-controls]').forEach(function(b){b.addEventListener('click',function(){var p=document.getElementById(b.getAttribute('aria-controls'));var open=p.hidden;p.hidden=!open;b.setAttribute('aria-expanded',open);b.textContent=open?'close':'buy';});});
 document.querySelectorAll('.copy').forEach(function(c){c.addEventListener('click',function(){if(!navigator.clipboard)return;navigator.clipboard.writeText(c.dataset.copy).then(function(){c.textContent='copied';setTimeout(function(){c.textContent='copy'},1500);});});});
 </script>
+<script data-goatcounter="https://21122.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
